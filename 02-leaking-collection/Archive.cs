@@ -11,7 +11,13 @@ public class Archive
 
     public List<string> GetEntries()
     {
-        // DESIGNFEIL med vilje: denne lekker den interne listen.
+        return entries.ToList();
+    }
+
+    /* Orginale koden som lekker ut innholdet.
+    public List<string> GetEntries()
+    {
         return entries;
     }
+    */
 }

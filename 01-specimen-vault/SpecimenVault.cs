@@ -5,16 +5,30 @@ public class SpecimenVault
     public void Add(string specimen)
     {
         // TODO
+        specimens.Add(specimen);
     }
 
     public bool Remove(string specimen)
     {
         // TODO
-        return false;
+        if (specimens.Remove(specimen))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void PrintAll()
     {
         // TODO
+        foreach (var specimen in specimens)
+        {
+            Console.WriteLine(specimen);
+        }
     }
 }
+
+// Ferdig.

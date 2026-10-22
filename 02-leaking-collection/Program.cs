@@ -5,7 +5,13 @@ archive.Add("A-3");
 
 List<string> outsideList = archive.GetEntries();
 
-// TODO del A: Clear outsideList og observer archive.Count.
-// TODO del B: Fiks GetEntries(), og prøv eksperimentet på nytt.
+// Kommenter ut for å sjekke at outsideList får en kopi
+// av archive
+outsideList.Clear();
 
 Console.WriteLine($"Archive count: {archive.Count}");
+
+foreach (var item in outsideList)
+{
+    Console.WriteLine($"OutsideList: {item}");
+}

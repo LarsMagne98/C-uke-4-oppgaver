@@ -9,4 +9,21 @@ List<Artifact> artifacts = new List<Artifact>
 };
 
 
-// TODO: Bruk Select til tre ulike projeksjoner.
+foreach (var item in artifacts.Select(artifact => artifact.Name))
+{
+    Console.WriteLine(item);
+}
+
+foreach (var item in artifacts.Select(artifact => artifact.Risk))
+{
+    Console.WriteLine(item);
+}
+
+foreach (var item in artifacts.Select(artifact =>
+    $"{artifact.Name} ({artifact.Origin})"))
+
+{
+    Console.WriteLine(item);
+}
+
+// Ferdig.
