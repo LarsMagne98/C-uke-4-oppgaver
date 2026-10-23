@@ -9,5 +9,21 @@ List<Artifact> artifacts = new List<Artifact>
 };
 
 
-// TODO: Where -> OrderBy -> Select.
-// TODO: Lag også en egen OrderBy på Risk.
+List<string> alphabeticalOrder = artifacts
+    .Where(artifact => artifact.Risk >= 30)
+    .OrderBy(artifact => artifact.Name)
+    .Select(artifact => $"{artifact.Name}: {artifact.Risk}")
+    .ToList();
+
+alphabeticalOrder.ForEach(Console.WriteLine);
+
+Console.WriteLine("----------------------------");
+
+List<string> numericalOrder = artifacts
+    .OrderBy(artifact => artifact.Risk)
+    .Select(artifact => $"{artifact.Name}: {artifact.Risk}")
+    .ToList();
+
+numericalOrder.ForEach(Console.WriteLine);
+
+// Ferdig.

@@ -9,4 +9,19 @@ List<Artifact> artifacts = new List<Artifact>
 };
 
 
-// TODO: Lag tre separate Where-queries.
+foreach (var item in artifacts.Where(artifact => artifact.Origin == "Moon"))
+{
+    Console.WriteLine($"Artifacts from the Moon: {item.Name}");
+}
+
+foreach (var item in artifacts.Where(artifact => artifact.Risk >= 60))
+{
+    Console.WriteLine($"Artifacts with risk bigger than or equal to 60: {item.Name}, Risk: {item.Risk}");
+}
+
+foreach (var item in artifacts.Where(artifact => artifact.Name.Contains('e', StringComparison.OrdinalIgnoreCase)))
+{
+    Console.WriteLine($"Artifacts that contains the letter \"e\": {item.Name}");
+}
+
+// Ferdig.
