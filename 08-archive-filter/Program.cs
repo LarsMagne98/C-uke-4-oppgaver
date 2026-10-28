@@ -9,19 +9,19 @@ List<Artifact> artifacts = new List<Artifact>
 };
 
 
-foreach (var item in artifacts.Where(artifact => artifact.Origin == "Moon"))
+foreach (var artifact in artifacts.Where(artifact => artifact.Origin == "Moon"))
 {
-    Console.WriteLine($"Artifacts from the Moon: {item.Name}");
+    Console.WriteLine($"Artifacts from the Moon: {artifact.Name}");
 }
 
-foreach (var item in artifacts.Where(artifact => artifact.Risk >= 60))
+foreach (var artifact in artifacts.Where(artifact => artifact.Risk >= 60))
 {
-    Console.WriteLine($"Artifacts with risk bigger than or equal to 60: {item.Name}, Risk: {item.Risk}");
+    Console.WriteLine($"Artifacts with risk bigger than or equal to 60: {artifact.Name}, Risk: {artifact.Risk}");
 }
 
-foreach (var item in artifacts.Where(artifact => artifact.Name.Contains('e', StringComparison.OrdinalIgnoreCase)))
+foreach (var artifact in artifacts.Where(artifact => artifact.Name.Contains('e', StringComparison.OrdinalIgnoreCase)))
 {
-    Console.WriteLine($"Artifacts that contains the letter \"e\": {item.Name}");
+    Console.WriteLine($"Artifacts that contains the letter \"e\": {artifact.Name}");
 }
 
 // Ferdig.

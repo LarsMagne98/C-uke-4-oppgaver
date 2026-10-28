@@ -10,7 +10,7 @@ var z = archive.FindArtifacts(artifact => artifact.Name.Contains("g", StringComp
 
 
 
-// For å få ut resultatet til consolen.
+// For å få ut resultatet til consolen, selv om det ikke står i oppgaveteksten.
 foreach (var item in x)
 {
     Console.WriteLine($"{item.Name}, {item.Origin}, {item.Risk}");

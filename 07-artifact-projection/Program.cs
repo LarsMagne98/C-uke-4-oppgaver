@@ -9,21 +9,21 @@ List<Artifact> artifacts = new List<Artifact>
 };
 
 
-foreach (var item in artifacts.Select(artifact => artifact.Name))
+foreach (var artifact in artifacts.Select(artifact => artifact.Name))
 {
-    Console.WriteLine(item);
+    Console.WriteLine(artifact);
 }
 
-foreach (var item in artifacts.Select(artifact => artifact.Risk))
+foreach (var artifact in artifacts.Select(artifact => artifact.Risk))
 {
-    Console.WriteLine(item);
+    Console.WriteLine(artifact);
 }
 
-foreach (var item in artifacts.Select(artifact =>
+foreach (var artifact in artifacts.Select(artifact =>
     $"{artifact.Name} ({artifact.Origin})"))
 
 {
-    Console.WriteLine(item);
+    Console.WriteLine(artifact);
 }
 
 // Ferdig.

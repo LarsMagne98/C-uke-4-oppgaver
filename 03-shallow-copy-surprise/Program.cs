@@ -15,3 +15,5 @@ foreach (var item in copy)
 {
     Console.WriteLine(item.Name);
 }
+
+// Ferdig.

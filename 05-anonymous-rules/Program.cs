@@ -1,6 +1,5 @@
 List<int> readings = new List<int> { 12, 88, 41, 93, 55, 7, 24, 36 };
 
-// TODO: Kall PrintMatching minst tre ganger med ulike lambdas.
 
 PrintMatching(readings, value => value >= 50);
 PrintMatching(readings, value => value is >= 20 and <= 40);
